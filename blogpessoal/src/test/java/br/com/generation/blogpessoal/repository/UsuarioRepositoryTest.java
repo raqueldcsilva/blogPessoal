@@ -49,7 +49,7 @@ public class UsuarioRepositoryTest {
 	}
 	
 	@Test
-	@DisplayName("💾 Retorna o nome")
+	@DisplayName("💾 Retorna o nome") //não é obrigatório
 	public void findByNomeRetornaNome() throws Exception {
 
 		Usuario usuario = usuarioRepository.findByNome("João da Silva");
@@ -68,6 +68,8 @@ public class UsuarioRepositoryTest {
 	public void end() {
 		
 		usuarioRepository.deleteAll();
+		
+		System.out.println("Teste finalizado");
 		
 	}
 }
